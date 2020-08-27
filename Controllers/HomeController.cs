@@ -42,7 +42,7 @@ namespace MockAssessment5b.Controllers
                 ViewData["CanVote"] = $"{UserName} can Vote";
                 return View();
             }
-            else if (Age == 21 && Age <25) //old enough to vote and drink but not old enough to rent a car cheaply
+            else if (Age >= 21 && Age <25) //old enough to vote and drink but not old enough to rent a car cheaply
             {
                 ViewData["CanVote"] = $"{UserName} can Vote";
                 ViewData["CanDrink"] = $"{UserName} can Drink";
