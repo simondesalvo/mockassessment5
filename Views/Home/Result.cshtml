@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewData["Title"] = "Result";
+}
+
+    <p>
+        @{
+            if (ViewData["TooYoung"] != null)
+            {
+                @ViewData["TooYoung"]
+            }
+            else if (ViewData["CanVote"] != null && ViewData["CanDrink"] != null && ViewData["CanRent"] != null)
+            {
+                @ViewData["CanVote"]
+                <br />
+                @ViewData["CanDrink"]
+                <br />
+                @ViewData["CanRent"]
+
+                <p>But maybe not those last two at the same time</p>
+            }
+            else if (ViewData["CanVote"] != null && ViewData["CanDrink"] != null)
+            {
+                @ViewData["CanVote"]
+                <br />
+                @ViewData["CanDrink"]
+            }
+            else if (ViewData["CanVote"] != null)
+            {
+                @ViewData["CanVote"]
+            }
+        }
+    </p>

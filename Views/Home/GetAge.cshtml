@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewData["Title"] = "GetAge";
+}
+<h1>Get Age Form</h1>
+
+<h3>@ViewBag.NameAndAge</h3>
+
+<form asp--controller="Home" asp-action="Result" method="post">
+    <label>Name</label>
+    <input type="text" name="UserName" />
+    <br/>
+    <label>Age</label>
+    <input type="number" name="Age" step="0" />
+    <br/>
+
+    <input type="submit" />
+</form>
